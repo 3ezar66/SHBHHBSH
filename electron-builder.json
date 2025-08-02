@@ -1,0 +1,53 @@
+{
+  "appId": "com.kashif.mining-detector",
+  "productName": "Kashif - Shabah Habashi",
+  "directories": {
+    "output": "dist-electron"
+  },
+  "files": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "package.json",
+    "ilam_mining.db",
+    "server/services/**/*",
+    "shared/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "server/services",
+      "to": "services"
+    },
+    {
+      "from": "shared",
+      "to": "shared"
+    },
+    {
+      "from": "ilam_mining.db",
+      "to": "ilam_mining.db"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Kashif Mining Detector"
+  },
+  "mac": {
+    "target": "dmg",
+    "icon": "icon.ico"
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "icon.ico"
+  }
+} 

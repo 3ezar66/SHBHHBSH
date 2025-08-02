@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": ".",
+    "outDir": "./dist/server",
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["shared/*"]
+    }
+  },
+  "include": ["server/**/*", "shared/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "client",
+    "server/routes/miners.ts",
+    "server/tests",
+    "server/vite.ts"
+  ]
+}

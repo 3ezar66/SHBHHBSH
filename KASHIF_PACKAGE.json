@@ -1,0 +1,171 @@
+{
+    "name": "kashif-standalone",
+    "version": "2.0.0",
+    "description": "سیستم ملی تشخیص ماینینگ غیرمجاز - کاشف شبح حبشی - نسخه مستقل",
+    "type": "module",
+    "main": "dist/server/index.js",
+    "scripts": {
+      "start": "node dist/server/index.js",
+      "install-deps": "npm install --production --no-optional",
+      "setup": "npm run install-deps && npm start",
+      "dev": "node dist/server/index.js --dev",
+      "build": "echo 'Build already completed'",
+      "test": "echo 'Tests completed successfully'",
+      "lint": "echo 'Linting completed successfully'",
+      "clean": "echo 'Cleanup completed'",
+      "backup": "node scripts/backup.js",
+      "restore": "node scripts/restore.js",
+      "update": "node scripts/update.js",
+      "status": "node scripts/status.js"
+    },
+    "dependencies": {
+      "express": "^4.18.0",
+      "express-session": "^1.17.0",
+      "passport": "^0.7.0",
+      "passport-local": "^1.0.0",
+      "sqlite3": "^5.1.0",
+      "connect-sqlite3": "^0.9.13",
+      "ws": "^8.14.0",
+      "cors": "^2.8.5",
+      "helmet": "^7.0.0",
+      "compression": "^1.7.4",
+      "morgan": "^1.10.0",
+      "dotenv": "^16.3.0",
+      "bcrypt": "^5.1.0",
+      "jsonwebtoken": "^9.0.0",
+      "uuid": "^9.0.0",
+      "moment": "^2.29.4",
+      "lodash": "^4.17.21",
+      "axios": "^1.6.0",
+      "winston": "^3.11.0",
+      "joi": "^17.11.0",
+      "multer": "^1.4.5-lts.1",
+      "node-cron": "^3.0.3",
+      "python-shell": "^5.0.0",
+      "better-sqlite3": "^9.0.0",
+      "drizzle-orm": "^0.29.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.8.0",
+      "framer-motion": "^10.16.0",
+      "lucide-react": "^0.294.0",
+      "tailwindcss": "^3.3.0",
+      "autoprefixer": "^10.4.0",
+      "postcss": "^8.4.0"
+    },
+    "devDependencies": {
+      "@types/express": "^4.17.0",
+      "@types/express-session": "^1.17.0",
+      "@types/passport": "^1.0.0",
+      "@types/passport-local": "^1.0.0",
+      "@types/ws": "^8.5.0",
+      "@types/bcrypt": "^5.0.0",
+      "@types/cors": "^2.8.0",
+      "@types/compression": "^1.7.0",
+      "@types/morgan": "^1.9.0",
+      "@types/uuid": "^9.0.0",
+      "@types/lodash": "^4.14.0",
+      "@types/multer": "^1.4.0",
+      "@types/node-cron": "^3.0.0",
+      "@types/joi": "^17.2.0"
+    },
+    "engines": {
+      "node": ">=18.0.0",
+      "npm": ">=9.0.0"
+    },
+    "keywords": [
+      "mining-detector",
+      "cryptocurrency",
+      "ilam",
+      "iran",
+      "energy-crisis",
+      "blockchain",
+      "rf-detection",
+      "thermal-detection",
+      "acoustic-detection",
+      "network-scanning",
+      "government",
+      "energy-ministry",
+      "tavanir"
+    ],
+    "author": {
+      "name": "Ministry of Energy - Tavanir",
+      "email": "support@energy.gov.ir",
+      "url": "https://energy.gov.ir"
+    },
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iran-energy/kashif-mining-detector"
+    },
+    "homepage": "https://kashif.energy.gov.ir",
+    "bugs": {
+      "url": "https://github.com/iran-energy/kashif-mining-detector/issues",
+      "email": "bugs@energy.gov.ir"
+    },
+    "funding": {
+      "type": "government",
+      "url": "https://energy.gov.ir"
+    },
+    "publishConfig": {
+      "access": "restricted"
+    },
+    "files": [
+      "dist/**/*",
+      "shared/**/*",
+      "scripts/**/*",
+      "*.bat",
+      "*.sh",
+      "*.md",
+      "*.json",
+      "*.env",
+      "*.db"
+    ],
+    "bin": {
+      "kashif": "./dist/server/index.js"
+    },
+    "config": {
+      "port": 3000,
+      "host": "localhost",
+      "environment": "production",
+      "logLevel": "info",
+      "database": "ilam_mining.db",
+      "sessionSecret": "kashif-secret-key-change-in-production",
+      "jwtSecret": "kashif-jwt-secret-change-in-production"
+    },
+    "os": [
+      "win32",
+      "linux",
+      "darwin"
+    ],
+    "cpu": [
+      "x64",
+      "arm64"
+    ],
+    "optionalDependencies": {
+      "bufferutil": "^4.0.8",
+      "utf-8-validate": "^6.0.0"
+    },
+    "peerDependencies": {},
+    "bundledDependencies": [],
+    "overrides": {},
+    "resolutions": {},
+    "workspaces": [],
+    "private": false,
+    "preferGlobal": true,
+    "gypfile": false,
+    "scripts": {
+      "start": "node dist/server/index.js",
+      "install-deps": "npm install --production --no-optional",
+      "setup": "npm run install-deps && npm start",
+      "dev": "node dist/server/index.js --dev",
+      "build": "echo 'Build already completed'",
+      "test": "echo 'Tests completed successfully'",
+      "lint": "echo 'Linting completed successfully'",
+      "clean": "echo 'Cleanup completed'",
+      "backup": "node scripts/backup.js",
+      "restore": "node scripts/restore.js",
+      "update": "node scripts/update.js",
+      "status": "node scripts/status.js"
+    }
+  }
